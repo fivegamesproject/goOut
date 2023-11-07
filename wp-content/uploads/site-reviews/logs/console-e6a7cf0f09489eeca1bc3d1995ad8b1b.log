@@ -1,0 +1,834 @@
+[2023-11-07 06:45:52] ERROR [Database:301] &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;
+&lt;div class=&quot;queries&quot; style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot;&gt;
+&lt;p&gt;MySQL query:&lt;/p&gt;
+&lt;p&gt;
+            ALTER TABLE wp_glsr_ratings
+            ADD terms tinyint(1) NOT NULL DEFAULT &#039;1&#039;
+            AFTER url
+        &lt;/p&gt;
+&lt;p&gt;Queries made or created this session were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Executing: BEGIN | (no parameters)&lt;/li&gt;
+&lt;li&gt;Executing: ROLLBACK | (no parameters)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot; class=&quot;error_message&quot; style=&quot;border-bottom:dotted blue thin;&quot;&gt;
+Error occurred at line 3373 in Function &lt;code&gt;handle_error&lt;/code&gt;. Error message was: Unknown operation: ADD.
+&lt;/div&gt;
+&lt;p&gt;Backtrace:&lt;/p&gt;
+&lt;pre&gt;#0 C:\laragon\www\goOut\wp-content\plugins\sqlite-database-integration\wp-includes\sqlite\class-wp-sqlite-db.php(287): WP_SQLite_Translator-&gt;get_error_message()
+#1 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php(94): WP_SQLite_DB-&gt;query(&#039;\n            AL...&#039;)
+#2 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php(50): GeminiLabs\SiteReviews\Database-&gt;dbQuery(&#039;\n            AL...&#039;)
+#3 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php(20): GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0\MigrateDatabase-&gt;migrateDatabase()
+#4 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0.php(22): GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0\MigrateDatabase-&gt;run()
+#5 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(166): GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0-&gt;run()
+#6 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(77): GeminiLabs\SiteReviews\Modules\Migrate-&gt;runMigrations()
+#7 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(310): GeminiLabs\SiteReviews\Modules\Migrate-&gt;run(&#039;&#039;)
+#8 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(334): WP_Hook-&gt;apply_filters(NULL, Array)
+#9 C:\laragon\www\goOut\wp-includes\plugin.php(517): WP_Hook-&gt;do_action(Array)
+#10 C:\laragon\www\goOut\wp-settings.php(495): do_action(&#039;plugins_loaded&#039;)
+#11 C:\laragon\www\goOut\wp-config.php(99): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#12 C:\laragon\www\goOut\wp-load.php(50): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#13 C:\laragon\www\goOut\wp-admin\admin-ajax.php(22): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#14 {main}&lt;/pre&gt;
+[2023-11-07 06:45:52] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 302
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php
+        [line] =&gt; 50
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php
+        [line] =&gt; 20
+        [function] =&gt; migrateDatabase
+        [class] =&gt; GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0\MigrateDatabase
+        [type] =&gt; -&gt;
+    )
+)
+[2023-11-07 06:45:52] ERROR [Migrations\Migrate_5_25_0\MigrateDatabase:57] Database table [wp_glsr_ratings] could not be altered, column [terms] was not added.
+[2023-11-07 06:45:52] ERROR [Database:301] &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;
+&lt;div class=&quot;queries&quot; style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot;&gt;
+&lt;p&gt;MySQL query:&lt;/p&gt;
+&lt;p&gt;
+            ALTER TABLE wp_glsr_ratings
+            ADD terms tinyint(1) NOT NULL DEFAULT &#039;1&#039;
+            AFTER url
+        &lt;/p&gt;
+&lt;p&gt;Queries made or created this session were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Executing: BEGIN | (no parameters)&lt;/li&gt;
+&lt;li&gt;Executing: ROLLBACK | (no parameters)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot; class=&quot;error_message&quot; style=&quot;border-bottom:dotted blue thin;&quot;&gt;
+Error occurred at line 3373 in Function &lt;code&gt;handle_error&lt;/code&gt;. Error message was: Unknown operation: ADD.
+&lt;/div&gt;
+&lt;p&gt;Backtrace:&lt;/p&gt;
+&lt;pre&gt;#0 C:\laragon\www\goOut\wp-content\plugins\sqlite-database-integration\wp-includes\sqlite\class-wp-sqlite-db.php(287): WP_SQLite_Translator-&gt;get_error_message()
+#1 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php(94): WP_SQLite_DB-&gt;query(&#039;\n            AL...&#039;)
+#2 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php(50): GeminiLabs\SiteReviews\Database-&gt;dbQuery(&#039;\n            AL...&#039;)
+#3 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php(20): GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0\MigrateDatabase-&gt;migrateDatabase()
+#4 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0.php(22): GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0\MigrateDatabase-&gt;run()
+#5 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(166): GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0-&gt;run()
+#6 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(77): GeminiLabs\SiteReviews\Modules\Migrate-&gt;runMigrations()
+#7 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(310): GeminiLabs\SiteReviews\Modules\Migrate-&gt;run(&#039;&#039;)
+#8 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(334): WP_Hook-&gt;apply_filters(NULL, Array)
+#9 C:\laragon\www\goOut\wp-includes\plugin.php(517): WP_Hook-&gt;do_action(Array)
+#10 C:\laragon\www\goOut\wp-settings.php(495): do_action(&#039;plugins_loaded&#039;)
+#11 C:\laragon\www\goOut\wp-config.php(99): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#12 C:\laragon\www\goOut\wp-load.php(50): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#13 C:\laragon\www\goOut\wp-admin\admin-ajax.php(22): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#14 {main}&lt;/pre&gt;
+[2023-11-07 06:45:53] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 302
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php
+        [line] =&gt; 50
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php
+        [line] =&gt; 20
+        [function] =&gt; migrateDatabase
+        [class] =&gt; GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0\MigrateDatabase
+        [type] =&gt; -&gt;
+    )
+)
+[2023-11-07 06:45:53] ERROR [Migrations\Migrate_5_25_0\MigrateDatabase:57] Database table [wp_glsr_ratings] could not be altered, column [terms] was not added.
+[2023-11-07 06:45:53] ERROR [Database:301] &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;
+&lt;div class=&quot;queries&quot; style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot;&gt;
+&lt;p&gt;MySQL query:&lt;/p&gt;
+&lt;p&gt;
+                ALTER TABLE wp_glsr_ratings
+                ADD is_verified tinyint(1) NOT NULL DEFAULT &#039;0&#039;
+                AFTER is_pinned
+            &lt;/p&gt;
+&lt;p&gt;Queries made or created this session were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Executing: BEGIN | (no parameters)&lt;/li&gt;
+&lt;li&gt;Executing: ROLLBACK | (no parameters)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot; class=&quot;error_message&quot; style=&quot;border-bottom:dotted blue thin;&quot;&gt;
+Error occurred at line 3373 in Function &lt;code&gt;handle_error&lt;/code&gt;. Error message was: Unknown operation: ADD.
+&lt;/div&gt;
+&lt;p&gt;Backtrace:&lt;/p&gt;
+&lt;pre&gt;#0 C:\laragon\www\goOut\wp-content\plugins\sqlite-database-integration\wp-includes\sqlite\class-wp-sqlite-db.php(287): WP_SQLite_Translator-&gt;get_error_message()
+#1 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php(94): WP_SQLite_DB-&gt;query(&#039;\n              ...&#039;)
+#2 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(117): GeminiLabs\SiteReviews\Database-&gt;dbQuery(&#039;\n              ...&#039;)
+#3 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(59): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;insertTableColumnIsVerified()
+#4 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(26): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;migrateDatabase()
+#5 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(166): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;run()
+#6 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(77): GeminiLabs\SiteReviews\Modules\Migrate-&gt;runMigrations()
+#7 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(310): GeminiLabs\SiteReviews\Modules\Migrate-&gt;run(&#039;&#039;)
+#8 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(334): WP_Hook-&gt;apply_filters(NULL, Array)
+#9 C:\laragon\www\goOut\wp-includes\plugin.php(517): WP_Hook-&gt;do_action(Array)
+#10 C:\laragon\www\goOut\wp-settings.php(495): do_action(&#039;plugins_loaded&#039;)
+#11 C:\laragon\www\goOut\wp-config.php(99): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#12 C:\laragon\www\goOut\wp-load.php(50): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#13 C:\laragon\www\goOut\wp-admin\admin-ajax.php(22): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#14 {main}&lt;/pre&gt;
+[2023-11-07 06:45:53] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 302
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 117
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 59
+        [function] =&gt; insertTableColumnIsVerified
+        [class] =&gt; GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0
+        [type] =&gt; -&gt;
+    )
+)
+[2023-11-07 06:45:53] ERROR [Migrations\Migrate_6_0_0:123] Database table [wp_glsr_ratings] could not be altered, column [is_verified] was not added.
+[2023-11-07 06:45:53] ERROR [Database:301] &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;
+&lt;div class=&quot;queries&quot; style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot;&gt;
+&lt;p&gt;MySQL query:&lt;/p&gt;
+&lt;p&gt;
+                ALTER TABLE wp_glsr_ratings
+                ADD is_verified tinyint(1) NOT NULL DEFAULT &#039;0&#039;
+                AFTER is_pinned
+            &lt;/p&gt;
+&lt;p&gt;Queries made or created this session were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Executing: BEGIN | (no parameters)&lt;/li&gt;
+&lt;li&gt;Executing: ROLLBACK | (no parameters)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot; class=&quot;error_message&quot; style=&quot;border-bottom:dotted blue thin;&quot;&gt;
+Error occurred at line 3373 in Function &lt;code&gt;handle_error&lt;/code&gt;. Error message was: Unknown operation: ADD.
+&lt;/div&gt;
+&lt;p&gt;Backtrace:&lt;/p&gt;
+&lt;pre&gt;#0 C:\laragon\www\goOut\wp-content\plugins\sqlite-database-integration\wp-includes\sqlite\class-wp-sqlite-db.php(287): WP_SQLite_Translator-&gt;get_error_message()
+#1 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php(94): WP_SQLite_DB-&gt;query(&#039;\n              ...&#039;)
+#2 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(117): GeminiLabs\SiteReviews\Database-&gt;dbQuery(&#039;\n              ...&#039;)
+#3 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(59): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;insertTableColumnIsVerified()
+#4 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(26): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;migrateDatabase()
+#5 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(166): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;run()
+#6 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(77): GeminiLabs\SiteReviews\Modules\Migrate-&gt;runMigrations()
+#7 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(310): GeminiLabs\SiteReviews\Modules\Migrate-&gt;run(&#039;&#039;)
+#8 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(334): WP_Hook-&gt;apply_filters(NULL, Array)
+#9 C:\laragon\www\goOut\wp-includes\plugin.php(517): WP_Hook-&gt;do_action(Array)
+#10 C:\laragon\www\goOut\wp-settings.php(495): do_action(&#039;plugins_loaded&#039;)
+#11 C:\laragon\www\goOut\wp-config.php(99): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#12 C:\laragon\www\goOut\wp-load.php(50): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#13 C:\laragon\www\goOut\wp-admin\admin-ajax.php(22): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#14 {main}&lt;/pre&gt;
+[2023-11-07 06:45:53] ERROR [Database:301] &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;
+&lt;div class=&quot;queries&quot; style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot;&gt;
+&lt;p&gt;MySQL query:&lt;/p&gt;
+&lt;p&gt;
+                ALTER TABLE wp_glsr_ratings
+                ADD score tinyint(1) NOT NULL DEFAULT &#039;0&#039;
+                AFTER terms
+            &lt;/p&gt;
+&lt;p&gt;Queries made or created this session were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Executing: BEGIN | (no parameters)&lt;/li&gt;
+&lt;li&gt;Executing: ROLLBACK | (no parameters)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot; class=&quot;error_message&quot; style=&quot;border-bottom:dotted blue thin;&quot;&gt;
+Error occurred at line 3373 in Function &lt;code&gt;handle_error&lt;/code&gt;. Error message was: Unknown operation: ADD.
+&lt;/div&gt;
+&lt;p&gt;Backtrace:&lt;/p&gt;
+&lt;pre&gt;#0 C:\laragon\www\goOut\wp-content\plugins\sqlite-database-integration\wp-includes\sqlite\class-wp-sqlite-db.php(287): WP_SQLite_Translator-&gt;get_error_message()
+#1 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php(94): WP_SQLite_DB-&gt;query(&#039;\n              ...&#039;)
+#2 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(134): GeminiLabs\SiteReviews\Database-&gt;dbQuery(&#039;\n              ...&#039;)
+#3 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(62): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;insertTableColumnScore()
+#4 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(26): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;migrateDatabase()
+#5 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(166): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;run()
+#6 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(77): GeminiLabs\SiteReviews\Modules\Migrate-&gt;runMigrations()
+#7 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(310): GeminiLabs\SiteReviews\Modules\Migrate-&gt;run(&#039;&#039;)
+#8 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(334): WP_Hook-&gt;apply_filters(NULL, Array)
+#9 C:\laragon\www\goOut\wp-includes\plugin.php(517): WP_Hook-&gt;do_action(Array)
+#10 C:\laragon\www\goOut\wp-settings.php(495): do_action(&#039;plugins_loaded&#039;)
+#11 C:\laragon\www\goOut\wp-config.php(99): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#12 C:\laragon\www\goOut\wp-load.php(50): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#13 C:\laragon\www\goOut\wp-admin\admin-ajax.php(22): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#14 {main}&lt;/pre&gt;
+[2023-11-07 06:45:53] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 302
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 134
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 62
+        [function] =&gt; insertTableColumnScore
+        [class] =&gt; GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0
+        [type] =&gt; -&gt;
+    )
+)
+[2023-11-07 06:45:53] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 302
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 117
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 59
+        [function] =&gt; insertTableColumnIsVerified
+        [class] =&gt; GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0
+        [type] =&gt; -&gt;
+    )
+)
+[2023-11-07 06:45:53] ERROR [Migrations\Migrate_6_0_0:123] Database table [wp_glsr_ratings] could not be altered, column [is_verified] was not added.
+[2023-11-07 06:45:53] ERROR [Migrations\Migrate_6_0_0:140] Database table [wp_glsr_ratings] could not be altered, column [score] was not added.
+[2023-11-07 06:45:53] ERROR [Database:301] &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;
+&lt;div class=&quot;queries&quot; style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot;&gt;
+&lt;p&gt;MySQL query:&lt;/p&gt;
+&lt;p&gt;
+                ALTER TABLE wp_glsr_ratings
+                ADD score tinyint(1) NOT NULL DEFAULT &#039;0&#039;
+                AFTER terms
+            &lt;/p&gt;
+&lt;p&gt;Queries made or created this session were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Executing: BEGIN | (no parameters)&lt;/li&gt;
+&lt;li&gt;Executing: ROLLBACK | (no parameters)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot; class=&quot;error_message&quot; style=&quot;border-bottom:dotted blue thin;&quot;&gt;
+Error occurred at line 3373 in Function &lt;code&gt;handle_error&lt;/code&gt;. Error message was: Unknown operation: ADD.
+&lt;/div&gt;
+&lt;p&gt;Backtrace:&lt;/p&gt;
+&lt;pre&gt;#0 C:\laragon\www\goOut\wp-content\plugins\sqlite-database-integration\wp-includes\sqlite\class-wp-sqlite-db.php(287): WP_SQLite_Translator-&gt;get_error_message()
+#1 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php(94): WP_SQLite_DB-&gt;query(&#039;\n              ...&#039;)
+#2 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(134): GeminiLabs\SiteReviews\Database-&gt;dbQuery(&#039;\n              ...&#039;)
+#3 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(62): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;insertTableColumnScore()
+#4 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(26): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;migrateDatabase()
+#5 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(166): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;run()
+#6 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(77): GeminiLabs\SiteReviews\Modules\Migrate-&gt;runMigrations()
+#7 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(310): GeminiLabs\SiteReviews\Modules\Migrate-&gt;run(&#039;&#039;)
+#8 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(334): WP_Hook-&gt;apply_filters(NULL, Array)
+#9 C:\laragon\www\goOut\wp-includes\plugin.php(517): WP_Hook-&gt;do_action(Array)
+#10 C:\laragon\www\goOut\wp-settings.php(495): do_action(&#039;plugins_loaded&#039;)
+#11 C:\laragon\www\goOut\wp-config.php(99): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#12 C:\laragon\www\goOut\wp-load.php(50): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#13 C:\laragon\www\goOut\wp-admin\admin-ajax.php(22): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#14 {main}&lt;/pre&gt;
+[2023-11-07 06:45:53] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 302
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 134
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 62
+        [function] =&gt; insertTableColumnScore
+        [class] =&gt; GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0
+        [type] =&gt; -&gt;
+    )
+)
+[2023-11-07 06:45:53] ERROR [Migrations\Migrate_6_0_0:140] Database table [wp_glsr_ratings] could not be altered, column [score] was not added.
+[2023-11-07 06:45:54] ERROR [Database:301] &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;
+&lt;div class=&quot;queries&quot; style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot;&gt;
+&lt;p&gt;MySQL query:&lt;/p&gt;
+&lt;p&gt;
+            ALTER TABLE wp_glsr_ratings
+            ADD terms tinyint(1) NOT NULL DEFAULT &#039;1&#039;
+            AFTER url
+        &lt;/p&gt;
+&lt;p&gt;Queries made or created this session were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Executing: BEGIN | (no parameters)&lt;/li&gt;
+&lt;li&gt;Executing: ROLLBACK | (no parameters)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot; class=&quot;error_message&quot; style=&quot;border-bottom:dotted blue thin;&quot;&gt;
+Error occurred at line 3373 in Function &lt;code&gt;handle_error&lt;/code&gt;. Error message was: Unknown operation: ADD.
+&lt;/div&gt;
+&lt;p&gt;Backtrace:&lt;/p&gt;
+&lt;pre&gt;#0 C:\laragon\www\goOut\wp-content\plugins\sqlite-database-integration\wp-includes\sqlite\class-wp-sqlite-db.php(287): WP_SQLite_Translator-&gt;get_error_message()
+#1 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php(94): WP_SQLite_DB-&gt;query(&#039;\n            AL...&#039;)
+#2 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php(50): GeminiLabs\SiteReviews\Database-&gt;dbQuery(&#039;\n            AL...&#039;)
+#3 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php(20): GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0\MigrateDatabase-&gt;migrateDatabase()
+#4 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0.php(22): GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0\MigrateDatabase-&gt;run()
+#5 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(166): GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0-&gt;run()
+#6 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(77): GeminiLabs\SiteReviews\Modules\Migrate-&gt;runMigrations()
+#7 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(310): GeminiLabs\SiteReviews\Modules\Migrate-&gt;run(&#039;&#039;)
+#8 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(334): WP_Hook-&gt;apply_filters(NULL, Array)
+#9 C:\laragon\www\goOut\wp-includes\plugin.php(517): WP_Hook-&gt;do_action(Array)
+#10 C:\laragon\www\goOut\wp-settings.php(495): do_action(&#039;plugins_loaded&#039;)
+#11 C:\laragon\www\goOut\wp-config.php(99): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#12 C:\laragon\www\goOut\wp-load.php(50): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#13 C:\laragon\www\goOut\wp-admin\admin.php(34): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#14 C:\laragon\www\goOut\wp-admin\plugins.php(10): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#15 {main}&lt;/pre&gt;
+[2023-11-07 06:45:54] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 302
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php
+        [line] =&gt; 50
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php
+        [line] =&gt; 20
+        [function] =&gt; migrateDatabase
+        [class] =&gt; GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0\MigrateDatabase
+        [type] =&gt; -&gt;
+    )
+)
+[2023-11-07 06:45:54] ERROR [Migrations\Migrate_5_25_0\MigrateDatabase:57] Database table [wp_glsr_ratings] could not be altered, column [terms] was not added.
+[2023-11-07 06:45:55] ERROR [Database:301] &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;
+&lt;div class=&quot;queries&quot; style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot;&gt;
+&lt;p&gt;MySQL query:&lt;/p&gt;
+&lt;p&gt;
+                ALTER TABLE wp_glsr_ratings
+                ADD is_verified tinyint(1) NOT NULL DEFAULT &#039;0&#039;
+                AFTER is_pinned
+            &lt;/p&gt;
+&lt;p&gt;Queries made or created this session were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Executing: BEGIN | (no parameters)&lt;/li&gt;
+&lt;li&gt;Executing: ROLLBACK | (no parameters)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot; class=&quot;error_message&quot; style=&quot;border-bottom:dotted blue thin;&quot;&gt;
+Error occurred at line 3373 in Function &lt;code&gt;handle_error&lt;/code&gt;. Error message was: Unknown operation: ADD.
+&lt;/div&gt;
+&lt;p&gt;Backtrace:&lt;/p&gt;
+&lt;pre&gt;#0 C:\laragon\www\goOut\wp-content\plugins\sqlite-database-integration\wp-includes\sqlite\class-wp-sqlite-db.php(287): WP_SQLite_Translator-&gt;get_error_message()
+#1 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php(94): WP_SQLite_DB-&gt;query(&#039;\n              ...&#039;)
+#2 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(117): GeminiLabs\SiteReviews\Database-&gt;dbQuery(&#039;\n              ...&#039;)
+#3 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(59): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;insertTableColumnIsVerified()
+#4 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(26): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;migrateDatabase()
+#5 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(166): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;run()
+#6 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(77): GeminiLabs\SiteReviews\Modules\Migrate-&gt;runMigrations()
+#7 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(310): GeminiLabs\SiteReviews\Modules\Migrate-&gt;run(&#039;&#039;)
+#8 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(334): WP_Hook-&gt;apply_filters(NULL, Array)
+#9 C:\laragon\www\goOut\wp-includes\plugin.php(517): WP_Hook-&gt;do_action(Array)
+#10 C:\laragon\www\goOut\wp-settings.php(495): do_action(&#039;plugins_loaded&#039;)
+#11 C:\laragon\www\goOut\wp-config.php(99): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#12 C:\laragon\www\goOut\wp-load.php(50): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#13 C:\laragon\www\goOut\wp-admin\admin.php(34): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#14 C:\laragon\www\goOut\wp-admin\plugins.php(10): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#15 {main}&lt;/pre&gt;
+[2023-11-07 06:45:55] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 302
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 117
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 59
+        [function] =&gt; insertTableColumnIsVerified
+        [class] =&gt; GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0
+        [type] =&gt; -&gt;
+    )
+)
+[2023-11-07 06:45:55] ERROR [Migrations\Migrate_6_0_0:123] Database table [wp_glsr_ratings] could not be altered, column [is_verified] was not added.
+[2023-11-07 06:45:55] ERROR [Database:301] &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;
+&lt;div class=&quot;queries&quot; style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot;&gt;
+&lt;p&gt;MySQL query:&lt;/p&gt;
+&lt;p&gt;
+                ALTER TABLE wp_glsr_ratings
+                ADD score tinyint(1) NOT NULL DEFAULT &#039;0&#039;
+                AFTER terms
+            &lt;/p&gt;
+&lt;p&gt;Queries made or created this session were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Executing: BEGIN | (no parameters)&lt;/li&gt;
+&lt;li&gt;Executing: ROLLBACK | (no parameters)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot; class=&quot;error_message&quot; style=&quot;border-bottom:dotted blue thin;&quot;&gt;
+Error occurred at line 3373 in Function &lt;code&gt;handle_error&lt;/code&gt;. Error message was: Unknown operation: ADD.
+&lt;/div&gt;
+&lt;p&gt;Backtrace:&lt;/p&gt;
+&lt;pre&gt;#0 C:\laragon\www\goOut\wp-content\plugins\sqlite-database-integration\wp-includes\sqlite\class-wp-sqlite-db.php(287): WP_SQLite_Translator-&gt;get_error_message()
+#1 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php(94): WP_SQLite_DB-&gt;query(&#039;\n              ...&#039;)
+#2 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(134): GeminiLabs\SiteReviews\Database-&gt;dbQuery(&#039;\n              ...&#039;)
+#3 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(62): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;insertTableColumnScore()
+#4 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(26): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;migrateDatabase()
+#5 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(166): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;run()
+#6 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(77): GeminiLabs\SiteReviews\Modules\Migrate-&gt;runMigrations()
+#7 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(310): GeminiLabs\SiteReviews\Modules\Migrate-&gt;run(&#039;&#039;)
+#8 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(334): WP_Hook-&gt;apply_filters(NULL, Array)
+#9 C:\laragon\www\goOut\wp-includes\plugin.php(517): WP_Hook-&gt;do_action(Array)
+#10 C:\laragon\www\goOut\wp-settings.php(495): do_action(&#039;plugins_loaded&#039;)
+#11 C:\laragon\www\goOut\wp-config.php(99): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#12 C:\laragon\www\goOut\wp-load.php(50): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#13 C:\laragon\www\goOut\wp-admin\admin.php(34): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#14 C:\laragon\www\goOut\wp-admin\plugins.php(10): require_once(&#039;C:\\laragon\\www\\...&#039;)
+#15 {main}&lt;/pre&gt;
+[2023-11-07 06:45:55] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 302
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 134
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 62
+        [function] =&gt; insertTableColumnScore
+        [class] =&gt; GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0
+        [type] =&gt; -&gt;
+    )
+)
+[2023-11-07 06:45:55] ERROR [Migrations\Migrate_6_0_0:140] Database table [wp_glsr_ratings] could not be altered, column [score] was not added.
+[2023-11-07 06:45:57] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Integrations\Cache\Controller.php:108] cache::flushing
+[2023-11-07 06:45:57] ERROR [Database:301] &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;
+&lt;div class=&quot;queries&quot; style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot;&gt;
+&lt;p&gt;MySQL query:&lt;/p&gt;
+&lt;p&gt;
+            ALTER TABLE wp_glsr_ratings
+            ADD terms tinyint(1) NOT NULL DEFAULT &#039;1&#039;
+            AFTER url
+        &lt;/p&gt;
+&lt;p&gt;Queries made or created this session were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Executing: BEGIN | (no parameters)&lt;/li&gt;
+&lt;li&gt;Executing: ROLLBACK | (no parameters)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot; class=&quot;error_message&quot; style=&quot;border-bottom:dotted blue thin;&quot;&gt;
+Error occurred at line 3373 in Function &lt;code&gt;handle_error&lt;/code&gt;. Error message was: Unknown operation: ADD.
+&lt;/div&gt;
+&lt;p&gt;Backtrace:&lt;/p&gt;
+&lt;pre&gt;#0 C:\laragon\www\goOut\wp-content\plugins\sqlite-database-integration\wp-includes\sqlite\class-wp-sqlite-db.php(287): WP_SQLite_Translator-&gt;get_error_message()
+#1 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php(94): WP_SQLite_DB-&gt;query(&#039;\n            AL...&#039;)
+#2 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php(50): GeminiLabs\SiteReviews\Database-&gt;dbQuery(&#039;\n            AL...&#039;)
+#3 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php(20): GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0\MigrateDatabase-&gt;migrateDatabase()
+#4 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0.php(22): GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0\MigrateDatabase-&gt;run()
+#5 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(166): GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0-&gt;run()
+#6 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(77): GeminiLabs\SiteReviews\Modules\Migrate-&gt;runMigrations()
+#7 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Controllers\AdminController.php(174): GeminiLabs\SiteReviews\Modules\Migrate-&gt;run()
+#8 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(310): GeminiLabs\SiteReviews\Controllers\AdminController-&gt;onActivation(&#039;&#039;)
+#9 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(334): WP_Hook-&gt;apply_filters(false, Array)
+#10 C:\laragon\www\goOut\wp-includes\plugin.php(517): WP_Hook-&gt;do_action(Array)
+#11 C:\laragon\www\goOut\wp-admin\admin-ajax.php(45): do_action(&#039;admin_init&#039;)
+#12 {main}&lt;/pre&gt;
+[2023-11-07 06:45:57] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 302
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php
+        [line] =&gt; 50
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_5_25_0\MigrateDatabase.php
+        [line] =&gt; 20
+        [function] =&gt; migrateDatabase
+        [class] =&gt; GeminiLabs\SiteReviews\Migrations\Migrate_5_25_0\MigrateDatabase
+        [type] =&gt; -&gt;
+    )
+)
+[2023-11-07 06:45:57] ERROR [Migrations\Migrate_5_25_0\MigrateDatabase:57] Database table [wp_glsr_ratings] could not be altered, column [terms] was not added.
+[2023-11-07 06:45:57] ERROR [Database:301] &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;
+&lt;div class=&quot;queries&quot; style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot;&gt;
+&lt;p&gt;MySQL query:&lt;/p&gt;
+&lt;p&gt;
+                ALTER TABLE wp_glsr_ratings
+                ADD is_verified tinyint(1) NOT NULL DEFAULT &#039;0&#039;
+                AFTER is_pinned
+            &lt;/p&gt;
+&lt;p&gt;Queries made or created this session were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Executing: BEGIN | (no parameters)&lt;/li&gt;
+&lt;li&gt;Executing: ROLLBACK | (no parameters)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot; class=&quot;error_message&quot; style=&quot;border-bottom:dotted blue thin;&quot;&gt;
+Error occurred at line 3373 in Function &lt;code&gt;handle_error&lt;/code&gt;. Error message was: Unknown operation: ADD.
+&lt;/div&gt;
+&lt;p&gt;Backtrace:&lt;/p&gt;
+&lt;pre&gt;#0 C:\laragon\www\goOut\wp-content\plugins\sqlite-database-integration\wp-includes\sqlite\class-wp-sqlite-db.php(287): WP_SQLite_Translator-&gt;get_error_message()
+#1 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php(94): WP_SQLite_DB-&gt;query(&#039;\n              ...&#039;)
+#2 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(117): GeminiLabs\SiteReviews\Database-&gt;dbQuery(&#039;\n              ...&#039;)
+#3 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(59): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;insertTableColumnIsVerified()
+#4 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(26): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;migrateDatabase()
+#5 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(166): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;run()
+#6 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(77): GeminiLabs\SiteReviews\Modules\Migrate-&gt;runMigrations()
+#7 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Controllers\AdminController.php(174): GeminiLabs\SiteReviews\Modules\Migrate-&gt;run()
+#8 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(310): GeminiLabs\SiteReviews\Controllers\AdminController-&gt;onActivation(&#039;&#039;)
+#9 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(334): WP_Hook-&gt;apply_filters(false, Array)
+#10 C:\laragon\www\goOut\wp-includes\plugin.php(517): WP_Hook-&gt;do_action(Array)
+#11 C:\laragon\www\goOut\wp-admin\admin-ajax.php(45): do_action(&#039;admin_init&#039;)
+#12 {main}&lt;/pre&gt;
+[2023-11-07 06:45:57] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 302
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 117
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 59
+        [function] =&gt; insertTableColumnIsVerified
+        [class] =&gt; GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0
+        [type] =&gt; -&gt;
+    )
+)
+[2023-11-07 06:45:57] ERROR [Migrations\Migrate_6_0_0:123] Database table [wp_glsr_ratings] could not be altered, column [is_verified] was not added.
+[2023-11-07 06:45:57] ERROR [Database:301] &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;
+&lt;div class=&quot;queries&quot; style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot;&gt;
+&lt;p&gt;MySQL query:&lt;/p&gt;
+&lt;p&gt;
+                ALTER TABLE wp_glsr_ratings
+                ADD score tinyint(1) NOT NULL DEFAULT &#039;0&#039;
+                AFTER terms
+            &lt;/p&gt;
+&lt;p&gt;Queries made or created this session were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Executing: BEGIN | (no parameters)&lt;/li&gt;
+&lt;li&gt;Executing: ROLLBACK | (no parameters)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot; class=&quot;error_message&quot; style=&quot;border-bottom:dotted blue thin;&quot;&gt;
+Error occurred at line 3373 in Function &lt;code&gt;handle_error&lt;/code&gt;. Error message was: Unknown operation: ADD.
+&lt;/div&gt;
+&lt;p&gt;Backtrace:&lt;/p&gt;
+&lt;pre&gt;#0 C:\laragon\www\goOut\wp-content\plugins\sqlite-database-integration\wp-includes\sqlite\class-wp-sqlite-db.php(287): WP_SQLite_Translator-&gt;get_error_message()
+#1 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php(94): WP_SQLite_DB-&gt;query(&#039;\n              ...&#039;)
+#2 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(134): GeminiLabs\SiteReviews\Database-&gt;dbQuery(&#039;\n              ...&#039;)
+#3 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(62): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;insertTableColumnScore()
+#4 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php(26): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;migrateDatabase()
+#5 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(166): GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0-&gt;run()
+#6 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Modules\Migrate.php(77): GeminiLabs\SiteReviews\Modules\Migrate-&gt;runMigrations()
+#7 C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Controllers\AdminController.php(174): GeminiLabs\SiteReviews\Modules\Migrate-&gt;run()
+#8 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(310): GeminiLabs\SiteReviews\Controllers\AdminController-&gt;onActivation(&#039;&#039;)
+#9 C:\laragon\www\goOut\wp-includes\class-wp-hook.php(334): WP_Hook-&gt;apply_filters(false, Array)
+#10 C:\laragon\www\goOut\wp-includes\plugin.php(517): WP_Hook-&gt;do_action(Array)
+#11 C:\laragon\www\goOut\wp-admin\admin-ajax.php(45): do_action(&#039;admin_init&#039;)
+#12 {main}&lt;/pre&gt;
+[2023-11-07 06:45:57] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 302
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 134
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Migrations\Migrate_6_0_0.php
+        [line] =&gt; 62
+        [function] =&gt; insertTableColumnScore
+        [class] =&gt; GeminiLabs\SiteReviews\Migrations\Migrate_6_0_0
+        [type] =&gt; -&gt;
+    )
+)
+[2023-11-07 06:45:57] ERROR [Migrations\Migrate_6_0_0:140] Database table [wp_glsr_ratings] could not be altered, column [score] was not added.
+[2023-11-07 06:45:57] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Integrations\Cache\Controller.php:108] cache::flushing
+[2023-11-07 10:09:08] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Integrations\Cache\Controller.php:108] cache::flushing
+[2023-11-07 10:09:26] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Integrations\Cache\Controller.php:108] cache::flushing
+[2023-11-07 10:09:51] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Integrations\Cache\Controller.php:108] cache::flushing
+[2023-11-07 10:10:55] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Integrations\Cache\Controller.php:108] cache::flushing
+[2023-11-07 17:43:32] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Integrations\Cache\Controller.php:108] cache::flushing
+[2023-11-07 17:47:47] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Integrations\Cache\Controller.php:108] cache::flushing
+[2023-11-07 17:47:57] DEBUG [C:\laragon\www\goOut\wp-content\plugins\site-reviews\plugin\Integrations\Cache\Controller.php:108] cache::flushing

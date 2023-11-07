@@ -1,0 +1,10 @@
+.search-filter-pro-vc-backend-icon
+{
+	width:32px;
+	height:32px;
+	display:block;
+	background-image:none;	
+	background-image:url("../images/vc-backend-icon.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}

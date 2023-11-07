@@ -1,0 +1,28 @@
+
+
+===========================<<<< 2023-11-07 14:55:31 PM >>>>=======================
+
+* Heading: Uncanny_Automator\WP_CREATEPOST->add_featured_image error 
+* Current Page: https://localhost/wp-admin/admin-ajax.php 
+
+===========================<<<< TRACE MESSAGE START >>>>=========================
+
+cURL error 60: SSL certificate problem: self signed certificate
+
+===========================<<<< TRACE MESSAGE END >>>>==========================
+
+
+
+
+===========================<<<< 2023-11-07 17:37:14 PM >>>>=======================
+
+* Heading: Uncanny_Automator\WP_CREATEPOST->add_featured_image error 
+* Current Page: https://localhost/wp-admin/admin-ajax.php 
+
+===========================<<<< TRACE MESSAGE START >>>>=========================
+
+cURL error 60: SSL certificate problem: self signed certificate
+
+===========================<<<< TRACE MESSAGE END >>>>==========================
+
+
